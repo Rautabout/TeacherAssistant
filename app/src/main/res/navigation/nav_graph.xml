@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeLayoutFragment">
+
+    <fragment
+        android:id="@+id/homeLayoutFragment"
+        android:name="com.example.teacherassistant.View.HomeLayoutFragment"
+        android:label="home_layout"
+        tools:layout="@layout/home_layout" >
+        <action
+            android:id="@+id/action_homeLayoutFragment_to_manageCoursesFragment"
+            app:destination="@id/manageCoursesFragment" />
+        <action
+            android:id="@+id/action_homeLayoutFragment_to_manageStudentsFragment"
+            app:destination="@id/manageStudentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageCoursesFragment"
+        android:name="com.example.teacherassistant.View.ManageCoursesFragment"
+        android:label="ManageCoursesFragment" >
+        <action
+            android:id="@+id/action_manageCoursesFragment_to_addEditCourseFragment"
+            app:destination="@id/addEditCourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditCourseFragment"
+        android:name="com.example.teacherassistant.View.InputView.AddEditCourseFragment"
+        android:label="AddEditCourseFragment" />
+    <fragment
+        android:id="@+id/manageStudentsFragment"
+        android:name="com.example.teacherassistant.View.ManageStudentsFragment"
+        android:label="ManageStudentsFragment" >
+        <action
+            android:id="@+id/action_manageStudentsFragment_to_addEditStudentFragment"
+            app:destination="@id/addEditStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditStudentFragment"
+        android:name="com.example.teacherassistant.View.InputView.AddEditStudentFragment"
+        android:label="AddEditStudentFragment" />
+</navigation>
