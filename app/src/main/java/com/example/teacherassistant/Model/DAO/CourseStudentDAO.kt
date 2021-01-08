@@ -11,16 +11,16 @@ import com.example.teacherassistant.Model.Student
 @Dao
 interface CourseStudentDAO {
     @Insert
-    suspend fun insertStudentSubject(courseStudent: CourseStudent)
+    suspend fun insertStudentCourse(courseStudent: CourseStudent)
 
     @Query("DELETE FROM course_student_table WHERE course_id == :courseID AND student_id == :studentID")
-    suspend fun deleteStudentSubject(courseID : Int, studentID : Int)
+    suspend fun deleteStudentCourse(courseID : Int, studentID : Int)
 
     @Query("SELECT * FROM student_table WHERE id IN (SELECT student_id FROM course_student_table WHERE course_id == :courseID) ORDER BY firstName,lastName ")
-    fun getAllStudentsFromSubject(courseID : Int) : LiveData<List<Student>>
+    fun getAllStudentsFromCourse(courseID : Int) : LiveData<List<Student>>
 
     @Query("SELECT * FROM student_table WHERE id NOT IN (SELECT student_id FROM course_student_table WHERE course_id == :courseID) ORDER BY firstName, lastName")
-    fun getAllStudentsOutOfSubject(courseID : Int) : LiveData<List<Student>>
+    fun getAllStudentsOutOfCourse(courseID : Int) : LiveData<List<Student>>
 
     @Query("SELECT * FROM course_table WHERE id IN (SELECT course_id FROM course_student_table WHERE student_id == :studentID)")
     fun getAllCoursesFromStudent(studentID : Int) : LiveData<List<Course>>

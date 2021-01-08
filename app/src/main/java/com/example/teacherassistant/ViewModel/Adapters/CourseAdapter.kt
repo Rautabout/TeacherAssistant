@@ -30,6 +30,7 @@ class CourseAdapter(
         val itemButton = holder.view.findViewById<Button>(R.id.itemButton)
         itemButton.text=courses.value?.get(position)?.courseName
         itemButton.setOnClickListener {
+            view->view.findNavController().navigate(R.id.action_manageCoursesFragment_to_studentsFromCourseFragment)
             val thisItem=courses.value?.get(position)
             if(thisItem!=null) changeCurrentCourse(thisItem)
         }

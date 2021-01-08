@@ -8,13 +8,25 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="addCourseToStudentFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-636" />
+                            <option name="y" value="-182" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="addEditCourseFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-868" />
-                            <option name="y" value="-180" />
+                            <option name="x" value="-836" />
+                            <option name="y" value="-477" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -25,8 +37,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-861" />
-                            <option name="y" value="171" />
+                            <option name="x" value="-816" />
+                            <option name="y" value="159" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -63,13 +75,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-1245" />
-                            <option name="y" value="-166" />
+                            <option name="x" value="-1308" />
+                            <option name="y" value="-376" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
                             <entry key="action_manageCoursesFragment_to_addEditCourseFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_manageCoursesFragment_to_studentsFromCourseFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -84,9 +101,39 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-1243" />
-                            <option name="y" value="180" />
+                            <option name="x" value="-1321" />
+                            <option name="y" value="425" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_manageStudentsFragment_to_addEditStudentFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="studentsFromCourseFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-998" />
+                            <option name="y" value="-187" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_studentsFromCourseFragment_to_addCourseToStudentFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

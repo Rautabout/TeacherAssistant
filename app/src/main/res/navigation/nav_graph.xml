@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_manageCoursesFragment_to_addEditCourseFragment"
             app:destination="@id/addEditCourseFragment" />
+        <action
+            android:id="@+id/action_manageCoursesFragment_to_studentsFromCourseFragment"
+            app:destination="@id/studentsFromCourseFragment" />
     </fragment>
     <fragment
         android:id="@+id/addEditCourseFragment"
@@ -41,4 +44,16 @@
         android:id="@+id/addEditStudentFragment"
         android:name="com.example.teacherassistant.View.InputView.AddEditStudentFragment"
         android:label="AddEditStudentFragment" />
+    <fragment
+        android:id="@+id/studentsFromCourseFragment"
+        android:name="com.example.teacherassistant.View.ConnectionView.StudentsFromCourseFragment"
+        android:label="StudentsFromCourseFragment" >
+        <action
+            android:id="@+id/action_studentsFromCourseFragment_to_addCourseToStudentFragment"
+            app:destination="@id/addCourseToStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCourseToStudentFragment"
+        android:name="com.example.teacherassistant.View.InputView.AddCourseToStudentFragment"
+        android:label="AddCourseToStudentFragment" />
 </navigation>
