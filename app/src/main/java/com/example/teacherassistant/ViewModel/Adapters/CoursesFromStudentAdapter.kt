@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.lifecycle.LiveData
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teacherassistant.Model.Course
 import com.example.teacherassistant.Model.Student
@@ -30,6 +31,7 @@ class CoursesFromStudentAdapter (
         val itemButton=holder.view.findViewById<Button>(R.id.itemButton)
         itemButton.text="${courses.value?.get(position)?.courseName}"
         itemButton.setOnClickListener {
+            view->view.findNavController().navigate(R.id.action_coursesFromStudentFragment_to_manageGradeFragment)
             val thisItem=courses.value?.get(position)
             if(thisItem!=null)changeCurrentCourse(thisItem)
         }

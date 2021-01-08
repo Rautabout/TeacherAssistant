@@ -54,6 +54,9 @@
         <action
             android:id="@+id/action_coursesFromStudentFragment_to_addCourseToStudentFragment2"
             app:destination="@id/addCourseToStudentFragment" />
+        <action
+            android:id="@+id/action_coursesFromStudentFragment_to_manageGradeFragment"
+            app:destination="@id/manageGradeFragment" />
     </fragment>
     <fragment
         android:id="@+id/studentsFromCourseFragment"
@@ -62,6 +65,9 @@
         <action
             android:id="@+id/action_studentsFromCourseFragment_to_addStudentToCourseFragment"
             app:destination="@id/addStudentToCourseFragment" />
+        <action
+            android:id="@+id/action_studentsFromCourseFragment_to_manageGradeFragment"
+            app:destination="@id/manageGradeFragment" />
     </fragment>
     <fragment
         android:id="@+id/addCourseToStudentFragment"
@@ -71,4 +77,16 @@
         android:id="@+id/addStudentToCourseFragment"
         android:name="com.example.teacherassistant.View.InputView.AddStudentToCourseFragment"
         android:label="AddStudentToCourseFragment" />
+    <fragment
+        android:id="@+id/manageGradeFragment"
+        android:name="com.example.teacherassistant.View.ManageGradeFragment"
+        android:label="ManageGradeFragment" >
+        <action
+            android:id="@+id/action_manageGradeFragment_to_addEditGradeFragment"
+            app:destination="@id/addEditGradeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditGradeFragment"
+        android:name="com.example.teacherassistant.View.InputView.AddEditGradeFragment"
+        android:label="AddEditGradeFragment" />
 </navigation>
