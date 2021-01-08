@@ -48,19 +48,27 @@
         android:name="com.example.teacherassistant.View.InputView.AddEditStudentFragment"
         android:label="AddEditStudentFragment" />
     <fragment
+        android:id="@+id/coursesFromStudentFragment"
+        android:name="com.example.teacherassistant.View.ConnectionView.CoursesFromStudentFragment"
+        android:label="CoursesFromStudentFragment" >
+        <action
+            android:id="@+id/action_coursesFromStudentFragment_to_addCourseToStudentFragment2"
+            app:destination="@id/addCourseToStudentFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/studentsFromCourseFragment"
         android:name="com.example.teacherassistant.View.ConnectionView.StudentsFromCourseFragment"
         android:label="StudentsFromCourseFragment" >
         <action
-            android:id="@+id/action_studentsFromCourseFragment_to_addCourseToStudentFragment"
-            app:destination="@id/addCourseToStudentFragment" />
+            android:id="@+id/action_studentsFromCourseFragment_to_addStudentToCourseFragment"
+            app:destination="@id/addStudentToCourseFragment" />
     </fragment>
     <fragment
         android:id="@+id/addCourseToStudentFragment"
         android:name="com.example.teacherassistant.View.InputView.AddCourseToStudentFragment"
         android:label="AddCourseToStudentFragment" />
     <fragment
-        android:id="@+id/coursesFromStudentFragment"
-        android:name="com.example.teacherassistant.View.ConnectionView.CoursesFromStudentFragment"
-        android:label="CoursesFromStudentFragment" />
+        android:id="@+id/addStudentToCourseFragment"
+        android:name="com.example.teacherassistant.View.InputView.AddStudentToCourseFragment"
+        android:label="AddStudentToCourseFragment" />
 </navigation>

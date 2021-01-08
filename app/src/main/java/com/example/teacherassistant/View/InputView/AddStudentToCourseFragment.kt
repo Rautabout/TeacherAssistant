@@ -9,28 +9,28 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teacherassistant.R
-import com.example.teacherassistant.ViewModel.Adapters.CourseToStudentAdapter
+import com.example.teacherassistant.ViewModel.Adapters.StudentToCoursesAdapter
 import com.example.teacherassistant.ViewModel.CourseStudentViewModel
 import com.example.teacherassistant.ViewModel.CourseViewModel
 import com.example.teacherassistant.ViewModel.StudentViewModel
 import kotlinx.android.synthetic.main.merge_layout.*
 
-class AddCourseToStudentFragment : Fragment() {
+class AddStudentToCourseFragment : Fragment() {
     private lateinit var recyclerView : RecyclerView
     private lateinit var myLayoutManager : RecyclerView.LayoutManager
-    private lateinit var myAdapter : CourseToStudentAdapter
-    private lateinit var courseStudentViewModel : CourseStudentViewModel
+    private lateinit var myAdapter : StudentToCoursesAdapter
     private lateinit var studentViewModel : StudentViewModel
     private lateinit var courseViewModel : CourseViewModel
+    private lateinit var courseStudentViewModel : CourseStudentViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         studentViewModel = ViewModelProvider(requireActivity()).get(StudentViewModel::class.java)
         courseViewModel = ViewModelProvider(requireActivity()).get(CourseViewModel::class.java)
         courseStudentViewModel = ViewModelProvider(requireActivity()).get(CourseStudentViewModel::class.java)
-        courseStudentViewModel.setCoursesNotInStudent(studentViewModel.currentStudent!!)
+        courseStudentViewModel.setStudentsNotInStudent(courseViewModel.currentCourse!!)
 
-        myAdapter = CourseToStudentAdapter(courseStudentViewModel.coursesNotInStudent!!)
-        courseStudentViewModel.coursesNotInStudent!!.observe(viewLifecycleOwner, { myAdapter.notifyDataSetChanged() })
+        myAdapter = StudentToCoursesAdapter(courseStudentViewModel.studentsNotInStudent!!)
+        courseStudentViewModel.studentsNotInStudent!!.observe(viewLifecycleOwner, { myAdapter.notifyDataSetChanged() })
 
         myLayoutManager = LinearLayoutManager(context)
 
@@ -46,11 +46,11 @@ class AddCourseToStudentFragment : Fragment() {
         }
 
         mergeOptionTV.text=""
-        mergeOptionSpecificTV.text="Courses"
+        mergeOptionSpecificTV.text="Students"
         mergeAddButton.text="Save"
         mergeAddButton.setOnClickListener {
-            myAdapter.coursesChecked.forEach{
-                course -> courseStudentViewModel.addCourseStudentConnection(course,studentViewModel.currentStudent!!)
+            myAdapter.studentsChecked.forEach{
+                    student -> courseStudentViewModel.addCourseStudentConnection(courseViewModel.currentCourse!! ,student )
             }
             activity?.onBackPressed()
         }

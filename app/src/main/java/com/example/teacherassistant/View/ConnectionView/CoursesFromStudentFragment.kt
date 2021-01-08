@@ -54,9 +54,10 @@ class CoursesFromStudentFragment : Fragment() {
 
         mergeOptionTV.text="Student: "
         mergeOptionSpecificTV.text=studentViewModel.currentStudent?.firstName.toString() + " "+ studentViewModel.currentStudent?.lastName.toString()
-        mergeAddButton.text="Add Student"
+        mergeAddButton.text="Add Course"
+
         mergeAddButton.setOnClickListener { view.findNavController().navigate(
-            R.id.action_studentsFromCourseFragment_to_addCourseToStudentFragment)
+            R.id.action_coursesFromStudentFragment_to_addCourseToStudentFragment2)
         }
     }
 
