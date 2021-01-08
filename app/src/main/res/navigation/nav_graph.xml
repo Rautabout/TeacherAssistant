@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_manageStudentsFragment_to_addEditStudentFragment"
             app:destination="@id/addEditStudentFragment" />
+        <action
+            android:id="@+id/action_manageStudentsFragment_to_coursesFromStudentFragment"
+            app:destination="@id/coursesFromStudentFragment" />
     </fragment>
     <fragment
         android:id="@+id/addEditStudentFragment"
@@ -56,4 +59,8 @@
         android:id="@+id/addCourseToStudentFragment"
         android:name="com.example.teacherassistant.View.InputView.AddCourseToStudentFragment"
         android:label="AddCourseToStudentFragment" />
+    <fragment
+        android:id="@+id/coursesFromStudentFragment"
+        android:name="com.example.teacherassistant.View.ConnectionView.CoursesFromStudentFragment"
+        android:label="CoursesFromStudentFragment" />
 </navigation>

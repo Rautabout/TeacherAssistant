@@ -51,7 +51,7 @@ class StudentsFromCourseFragment : Fragment() {
             this.adapter = myAdapter
         }
 
-        mergeOptionTV.text="Kurs: "
+        mergeOptionTV.text="Course: "
         mergeOptionSpecificTV.text=courseViewModel.currentCourse?.courseName.toString()
         mergeAddButton.text="Add Student"
         mergeAddButton.setOnClickListener { view.findNavController().navigate(

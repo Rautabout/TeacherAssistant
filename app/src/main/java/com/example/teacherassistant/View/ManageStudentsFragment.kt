@@ -20,7 +20,10 @@ class ManageStudentsFragment : Fragment() {
     private lateinit var myAdapter : StudentAdapter
     private lateinit var viewModel: StudentViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?): View? {
         myLayoutManager = LinearLayoutManager(context)
         viewModel = ViewModelProvider(requireActivity()).get(StudentViewModel::class.java)
         myAdapter = StudentAdapter(viewModel.students, { s -> viewModel.deleteStudent(s) }, { w -> viewModel.setCurrentStudent(w) })

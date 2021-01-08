@@ -31,6 +31,7 @@ class StudentAdapter (var students: LiveData<List<Student>>,
         itemButton.text =
             "${students.value?.get(position)?.firstName} ${students.value?.get(position)?.lastName}"
         itemButton.setOnClickListener {
+            view->view.findNavController().navigate(R.id.action_manageStudentsFragment_to_coursesFromStudentFragment)
             val thisItem = students.value?.get(position)
             if (thisItem != null) changeCurrentStudent(thisItem)
         }

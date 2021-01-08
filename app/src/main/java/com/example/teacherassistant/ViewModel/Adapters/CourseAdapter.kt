@@ -53,7 +53,4 @@ class CourseAdapter(
 
     override fun getItemCount(): Int =
         courses.value?.size ?: 0
-
-
-
 }
