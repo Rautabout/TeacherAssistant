@@ -9,20 +9,19 @@
 
     <TextView
         android:id="@+id/gradeItemTV"
-        android:layout_width="wrap_content"
+        android:layout_width="3dp"
         android:layout_height="match_parent"
         android:layout_weight="10"
-        android:text="lorem"
         android:gravity="center"
-        />
+        android:text="lorem" />
+
     <TextView
         android:id="@+id/noteItemTV"
-        android:layout_width="wrap_content"
+        android:layout_width="118dp"
         android:layout_height="match_parent"
         android:layout_weight="10"
-        android:text="ipsum"
         android:gravity="center"
-        />
+        android:text="ipsum" />
     <Button
         android:id="@+id/editItemButton"
         android:layout_width="wrap_content"

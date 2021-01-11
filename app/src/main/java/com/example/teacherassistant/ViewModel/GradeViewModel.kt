@@ -16,13 +16,13 @@ class GradeViewModel (application: Application) : AndroidViewModel(application) 
     private val gradeRepo : GradeRepo = GradeRepo(database.gradeDAO())
     val gradesFromToday : LiveData<List<Grade>> = gradeRepo.getAllGradesFromToday
 
-    fun addGrade(courseStudentID : Int, grade : Int, note : String, date : String)
+    fun addGrade(courseStudentID : Int, grade : String, note : String, date : String)
     {
         viewModelScope.launch { gradeRepo.add(Grade(id = 0,
             courseStudent_id = courseStudentID, grade = grade, note = note, date = date)) }
     }
 
-    fun editMark(courseStudentID : Int, grade : Int, note : String, date : String)
+    fun editGrade(courseStudentID : Int, grade : String, note : String, date : String)
     {
         viewModelScope.launch { if (currentGrade != null) gradeRepo.edit(
             Grade(id = currentGrade!!.id,
@@ -30,16 +30,16 @@ class GradeViewModel (application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun deleteMark(grade : Grade)
+    fun deleteGrade(grade : Grade)
     {
         viewModelScope.launch { gradeRepo.delete(grade) }
     }
 
-    @JvmName("setCurrentMark1")
-    fun setCurrentMark(grade: Grade?) { currentGrade = grade }
+    @JvmName("setCurrentGrade1")
+    fun setCurrentGrade(grade: Grade?) { currentGrade = grade }
 
     var gradesFromCurrentCourseStudent : LiveData<List<Grade>>? = null
-    fun setMarksFromCurrentStudentSubject(courseStudent : CourseStudent?) {
+    fun setGradesFromCurrentStudent(courseStudent : CourseStudent?) {
         if (courseStudent != null)
             gradesFromCurrentCourseStudent = gradeRepo.getAllGradesFromCourseStudent(courseStudent.id)
     }

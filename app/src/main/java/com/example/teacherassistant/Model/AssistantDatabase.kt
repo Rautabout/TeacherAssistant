@@ -10,7 +10,7 @@ import com.example.teacherassistant.Model.DAO.GradeDAO
 import com.example.teacherassistant.Model.DAO.StudentDAO
 
 
-@Database(entities = [Course::class, Student::class, CourseStudent::class,Grade::class],version = 5,exportSchema = false)
+@Database(entities = [Course::class, Student::class, CourseStudent::class,Grade::class],version = 6,exportSchema = false)
 abstract class AssistantDatabase : RoomDatabase(){
 
     abstract fun courseDAO(): CourseDAO

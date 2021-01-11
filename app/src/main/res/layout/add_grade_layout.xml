@@ -8,6 +8,7 @@
         android:id="@+id/addGradeInputTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
         android:gravity="center"
         android:text="Grade"
         app:layout_constraintBottom_toTopOf="@+id/sFirstNameLinLay"
@@ -27,20 +28,19 @@
 
         <TextView
             android:id="@+id/gradeGradeTV"
-            android:layout_width="wrap_content"
+            android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:text="Grade" />
 
-        <EditText
-            android:id="@+id/gradeGradeInput"
-            android:layout_width="280dp"
+        <Spinner
+            android:id="@+id/gradeSpinner"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="textPersonName" />
+            android:spinnerMode="dropdown"
+            android:layout_weight="1" />
+
 
     </LinearLayout>
 
@@ -64,8 +64,8 @@
 
         <EditText
             android:id="@+id/gradeNotesInput"
-            android:layout_width="280dp"
-            android:layout_height="109dp"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:gravity="center"

@@ -9,4 +9,4 @@ import androidx.room.TypeConverter
     ForeignKey(entity = CourseStudent::class, parentColumns = ["id"],
     childColumns = ["courseStudent_id"], onDelete = ForeignKey.CASCADE)
 ])
-data class Grade(@PrimaryKey(autoGenerate = true)val id : Int, val courseStudent_id : Int, val grade : Int, val note : String, val date : String)
+data class Grade(@PrimaryKey(autoGenerate = true)val id : Int, val courseStudent_id : Int, val grade : String, val note : String, val date : String)

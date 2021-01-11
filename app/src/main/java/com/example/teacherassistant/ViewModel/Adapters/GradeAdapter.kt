@@ -3,7 +3,10 @@ package com.example.teacherassistant.ViewModel.Adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.lifecycle.LiveData
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teacherassistant.Model.Grade
 import com.example.teacherassistant.R
@@ -23,7 +26,23 @@ class GradeAdapter(
     }
 
     override fun onBindViewHolder(holder: GradeHolder, position: Int) {
-        TODO("Not yet implemented")
+        val gradeItemTV=holder.view.findViewById<TextView>(R.id.gradeItemTV)
+        gradeItemTV.text=grades?.value?.get(position)?.grade
+        val noteItemTV=holder.view.findViewById<TextView>(R.id.noteItemTV)
+        noteItemTV.text=grades?.value?.get(position)?.note
+
+        val editItemButton=holder.view.findViewById<Button>(R.id.editItemButton)
+        editItemButton.setOnClickListener {
+            view -> view.findNavController().navigate(R.id.action_manageGradeFragment_to_addEditGradeFragment)
+            val thisItem=grades?.value?.get(position)
+            if(thisItem!=null) changeCurrentGrade(thisItem)
+        }
+
+        val deleteItemButton=holder.view.findViewById<Button>(R.id.deleteItemButton)
+        deleteItemButton.setOnClickListener {
+            val thisItem=grades?.value?.get(position)
+            if(thisItem!=null) onClickDelete(thisItem)
+        }
     }
 
     override fun getItemCount(): Int =
