@@ -8,7 +8,7 @@ import java.util.*
 
 class GradeRepo(private val gradeDao: GradeDAO) {
     val getAllGradesFromToday : LiveData<List<Grade>>
-            = gradeDao.getAllGradesFromGivenDay(SimpleDateFormat("dd-MM-yyyy").format(Date()))
+            = gradeDao.getAllGradesFromGivenDay(SimpleDateFormat("dd.MM.yyyy").format(Date()))
     fun getAllGradesFromCourseStudent(courseStudentID : Int)
             = gradeDao.getAllGradesFromCourseStudent(courseStudentID)
     suspend fun add(mark: Grade) = gradeDao.insertGrade(mark)

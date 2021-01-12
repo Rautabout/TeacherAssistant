@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeLayoutFragment_to_manageStudentsFragment"
             app:destination="@id/manageStudentsFragment" />
+        <action
+            android:id="@+id/action_homeLayoutFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
     </fragment>
     <fragment
         android:id="@+id/manageCoursesFragment"
@@ -89,4 +92,8 @@
         android:id="@+id/addEditGradeFragment"
         android:name="com.example.teacherassistant.View.InputView.AddEditGradeFragment"
         android:label="AddEditGradeFragment" />
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.teacherassistant.View.ReportFragment"
+        android:label="ReportFragment" />
 </navigation>

@@ -26,6 +26,9 @@ class HomeLayoutFragment : Fragment(){
         buttonStudents.setOnClickListener {
             view.findNavController().navigate(R.id.action_homeLayoutFragment_to_manageStudentsFragment)
         }
+        buttonDailyReport.setOnClickListener {
+            view.findNavController().navigate(R.id.action_homeLayoutFragment_to_reportFragment)
+        }
     }
 
 

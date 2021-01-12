@@ -115,6 +115,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_homeLayoutFragment_to_reportFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -155,6 +160,15 @@
                             <option name="y" value="-24" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_manageGradeFragment_to_addEditGradeFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -180,6 +194,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="reportFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-1606" />
+                            <option name="y" value="867" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
